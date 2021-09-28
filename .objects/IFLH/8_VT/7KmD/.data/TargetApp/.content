@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="BthoeKTOWkG6Ty11hUHe_g" Selector="&lt;html app='chrome.exe' title='Certificado de circulación - coronavirus COVID-19 | Argentina.gob.ar'/&gt;" Url="https://www.argentina.gob.ar/circular" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0gIFOKeL1qUe4N81VelyH9w</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="c2dbaf68fce32577a0211c517fc6d9a2.png" xmlns="">0xHQcVgFa0Ui1PMrCyjfr-Q</imageRef>
+</TargetApp>

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "7KmDi3ECz0ODSomaaqm50g",
+  "Reference": "pO0spALM1UewTKLwRMxm9w/7KmDi3ECz0ODSomaaqm50g",
+  "ParentRef": "pO0spALM1UewTKLwRMxm9w/8_VTZcSljEKZn-rMEQtKKA",
+  "Name": "Certificado de circulación - HOME",
+  "Description": "\t\t\t",
+  "Type": "Screen",
+  "Created": "2021-09-27T19:06:44.4279922Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-09-27T19:06:44.4279922Z"
+}

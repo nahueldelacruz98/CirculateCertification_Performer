@@ -1,0 +1,13 @@
+﻿{
+  "Id": "ubXDIb9SxUWvee_ITl1VxA",
+  "Reference": "pO0spALM1UewTKLwRMxm9w/ubXDIb9SxUWvee_ITl1VxA",
+  "ParentRef": "pO0spALM1UewTKLwRMxm9w/f2LUJ2SojEWSVxEOJVkohw",
+  "Name": "¿Tenés DNI?",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Created": "2021-09-27T19:06:46.5499584Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-09-27T19:06:46.5499584Z"
+}

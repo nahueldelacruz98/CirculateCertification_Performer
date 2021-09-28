@@ -1,0 +1,13 @@
+﻿{
+  "Id": "qrKP03pVpEi9BTc194NA2A",
+  "Reference": "pO0spALM1UewTKLwRMxm9w/qrKP03pVpEi9BTc194NA2A",
+  "ParentRef": "pO0spALM1UewTKLwRMxm9w/7KmDi3ECz0ODSomaaqm50g",
+  "Name": "Tramita tu certificado",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2021-09-27T19:06:45.0649574Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-09-27T19:06:45.0649574Z"
+}

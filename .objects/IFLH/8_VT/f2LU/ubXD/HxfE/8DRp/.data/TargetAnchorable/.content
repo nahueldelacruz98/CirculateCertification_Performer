@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.argentina.gob.ar/circular/tramite" ContentHash="ZS21RqZZaE2Oofft0AUTyg" DesignTimeRectangle="1156, 361, 75, 27" ElementType="Text" FriendlyName="'continuá'" FullSelectorArgument="&lt;webctrl parentid='ponchoTable' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ponchoTable' tag='A' type='' aaname='continuá' check:text='continuá' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trámite | Argentina.gob.ar' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">03uetxUL5C06CJDEUCRDG6A</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="35f217a663f71fcc57b291b427fa50f6.png" xmlns="">0zeHfQ2i1QEWXNqBAMq0KXQ</imageRef>
+</TargetAnchorable>

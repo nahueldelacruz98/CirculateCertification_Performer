@@ -1,0 +1,13 @@
+﻿{
+  "Id": "8DRpdsU2KUyDTt4Bzpz_3g",
+  "Reference": "pO0spALM1UewTKLwRMxm9w/8DRpdsU2KUyDTt4Bzpz_3g",
+  "ParentRef": "pO0spALM1UewTKLwRMxm9w/HxfEdxC_dUS_gdgGk6elwQ",
+  "Name": "Motivo - Trabajador de salud o del Estado",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2021-09-27T19:06:48.3180586Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-09-27T19:06:48.3180586Z"
+}

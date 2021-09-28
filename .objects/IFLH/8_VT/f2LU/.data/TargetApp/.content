@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="07WbgZWt0kGj1MilfCJVig" Selector="&lt;html app='chrome.exe' title='Trámite | Argentina.gob.ar' /&gt;" Url="https://www.argentina.gob.ar/circular/tramite" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0An_UgV6Wh0iGwqLZJZImnw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="80f701aba83d9cca9c19eec440e24c47.png" xmlns="">0JuebBnP4eUqz6PpMdaaeLw</imageRef>
+</TargetApp>

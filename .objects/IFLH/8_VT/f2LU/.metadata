@@ -1,0 +1,12 @@
+﻿{
+  "Id": "f2LUJ2SojEWSVxEOJVkohw",
+  "Reference": "pO0spALM1UewTKLwRMxm9w/f2LUJ2SojEWSVxEOJVkohw",
+  "ParentRef": "pO0spALM1UewTKLwRMxm9w/8_VTZcSljEKZn-rMEQtKKA",
+  "Name": "Trámite - Start Procedure",
+  "Type": "Screen",
+  "Created": "2021-09-27T19:06:45.8796234Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-09-27T19:06:45.8796234Z"
+}

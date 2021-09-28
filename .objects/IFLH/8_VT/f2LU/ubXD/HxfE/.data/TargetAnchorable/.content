@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.argentina.gob.ar/circular/tramite" ContentHash="S7VQD95ojUu5rJ5Ixdk3FQ" DesignTimeRectangle="610, 608, 700, 44" ElementType="DropDown" FriendlyName="'Elegí una opción'" FullSelectorArgument="&lt;webctrl id='motivo1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='motivo1' tag='SELECT' type='' aaname='¿Por qué motivo pedís el certificado?' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trámite | Argentina.gob.ar' /&gt;" SearchSteps="FuzzySelector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="610, 578, 238, 20" ElementType="Text" FriendlyName="'¿Por qué'" FullSelectorArgument="&lt;webctrl aaname='¿Por qué motivo pedís el certificado?' parentid='ponchoTableFiltro' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='¿Por qué motivo pedís el certificado?' parentid='ponchoTableFiltro' tag='LABEL' type='' check:text='¿Por qué motivo pedís el certificado?' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">0HUWrnk9mnEeB8-9tPsOuSg</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="InformativeScreenshot" originalValue="d9779976812c0c95d33a40a84a2f717d.png" xmlns="">0ZPrYsB-C10Wfrxx9Q9GHlA</imageRef>
+</TargetAnchorable>

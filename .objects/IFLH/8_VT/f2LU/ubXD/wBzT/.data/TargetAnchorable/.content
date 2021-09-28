@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.argentina.gob.ar/circular/tramite" ContentHash="C7Ycqm0V1kus-EgggtbaTA" DesignTimeRectangle="610, 602, 700, 44" ElementType="DropDown" FriendlyName="'Elegí una opción'" FullSelectorArgument="&lt;webctrl id='provincia' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='provincia' tag='SELECT' type='' aaname='¿A cuál provincia tenés que ir?' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trámite | Argentina.gob.ar' /&gt;" SearchSteps="FuzzySelector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="610, 572, 195, 20" ElementType="Text" FriendlyName="'¿A cuál'" FullSelectorArgument="&lt;webctrl aaname='¿A cuál provincia tenés que ir?' parentid='ponchoTableFiltro' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='¿A cuál provincia tenés que ir?' parentid='ponchoTableFiltro' tag='LABEL' type='' check:text='¿A cuál provincia tenés que ir?' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">0dgYX_LGrzk2NBEewcRQ-2A</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="InformativeScreenshot" originalValue="b4b632b967c59cbbde54fd269735d7a3.png" xmlns="">0BNOU7hIJqkCI3gns8Skg5w</imageRef>
+</TargetAnchorable>
