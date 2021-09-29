@@ -5127,15 +5127,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dirwa\\.nuget\\packages\\": {}
+    "C:\\Users\\Nahuel De la cruz\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "CirculateCertification_Argentina_Performer",
       "projectName": "CirculateCertification_Argentina_Performer",
-      "projectPath": "C:\\Users\\Dirwa\\Documents\\UiPath\\CirculateCertification_Argentina_Performer\\.local",
-      "packagesPath": "C:\\Users\\Dirwa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dirwa\\Documents\\UiPath\\CirculateCertification_Argentina_Performer\\.local"
+      "projectPath": "C:\\Users\\Nahuel De la cruz\\Desktop\\Nahuel\\2 - UiPath Cursos Online\\AGRANDDA - INTERNSHIP\\CirculateCertification_Performer\\.local",
+      "packagesPath": "C:\\Users\\Nahuel De la cruz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nahuel De la cruz\\Desktop\\Nahuel\\2 - UiPath Cursos Online\\AGRANDDA - INTERNSHIP\\CirculateCertification_Performer\\.local"
     },
     "frameworks": {
       "net461": {
@@ -5156,8 +5156,21 @@
             "version": "[21.6.1-preview, 21.6.1-preview]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Dirwa\\AppData\\Local\\UiPath\\app-21.4.4\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Nahuel De la cruz\\AppData\\Local\\UiPath\\app-21.4.4\\runtime.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Microsoft.Extensions.Primitives 3.1.6 depends on System.Memory (>= 4.5.2) but System.Memory 4.5.2 was not found. An approximate best match of System.Memory 4.5.3 was resolved.",
+      "libraryId": "System.Memory",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1",
+        ".NETFramework,Version=v4.6.1/win7-x86"
+      ]
+    }
+  ]
 }

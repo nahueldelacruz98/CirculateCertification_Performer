@@ -1,4 +1,28 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SelectTypeOfForm" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="467,1360" sap2010:WorkflowViewState.IdRef="SelectTypeOfForm_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SelectTypeOfForm" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Destination province where the user wants to go to." Name="in_DestinationProvince" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The reason which the user wants a Circulate Certificate" Name="in_MainCertificateReason" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="DNI Option to select in the checkbox" Name="in_TypeDNIAccess" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The DNI Option for Foreign people with passport" Name="in_ForeignDNIOption" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The key to select the Type of form to proceed" Name="in_FormOption" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:SelectTypeOfForm.in_DestinationProvince>
+    <InArgument x:TypeArguments="x:String" />
+  </this:SelectTypeOfForm.in_DestinationProvince>
+  <this:SelectTypeOfForm.in_MainCertificateReason>
+    <InArgument x:TypeArguments="x:String" />
+  </this:SelectTypeOfForm.in_MainCertificateReason>
+  <this:SelectTypeOfForm.in_TypeDNIAccess>
+    <InArgument x:TypeArguments="x:String" />
+  </this:SelectTypeOfForm.in_TypeDNIAccess>
+  <this:SelectTypeOfForm.in_ForeignDNIOption>
+    <InArgument x:TypeArguments="x:String" />
+  </this:SelectTypeOfForm.in_ForeignDNIOption>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1002,1041</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SelectTypeOfForm_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -51,27 +75,36 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SelectTypeOfForm" sap:VirtualizedContainerService.HintSize="477,1195" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SelectTypeOfForm" sap:VirtualizedContainerService.HintSize="602,976" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Start Procedure' page" sap:VirtualizedContainerService.HintSize="435,1103" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="4c00e65030348276a0de454a7db2d4dd" Selector="&lt;html app='chrome.exe' title='Trámite | Argentina.gob.ar' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Start Procedure' page" sap:VirtualizedContainerService.HintSize="560,884" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="4c00e65030348276a0de454a7db2d4dd" Selector="&lt;html app='chrome.exe' title='Trámite | Argentina.gob.ar' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="401,957" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,698" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'Primero Informar' title label" sap:VirtualizedContainerService.HintSize="359,51" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'Primero Informar' title label" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
               <ui:WaitUiElementAppear.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ef5ba7db-d6bf-4bbf-8788-4ec527042f04" InformativeScreenshot="394944d503dd5881619b649c4cce835e" Selector="&lt;webctrl parentid='block-system-main' tag='H2' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -89,7 +122,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:WaitUiElementAppear>
-            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  dni'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="No, tengo documento de identidad de país limítrofe o pasaporte extranjero">
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'DNI Type'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[&quot;*&quot; + in_TypeDNIAccess +&quot;*&quot;]">
               <ui:SelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="4">
                   <x:String>Elegí una opción</x:String>
@@ -108,70 +141,106 @@
                   </ui:Target.WaitForReady>
                 </ui:Target>
               </ui:SelectItem.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:SelectItem>
-            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  provincia'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="Ciudad Autónoma de Buenos Aires">
-              <ui:SelectItem.Items>
-                <scg:List x:TypeArguments="x:String" Capacity="32">
-                  <x:String>Elegí una opción</x:String>
-                  <x:String>Buenos Aires — municipios del AMBA</x:String>
-                  <x:String>Buenos Aires — municipios que NO son parte del AMBA</x:String>
-                  <x:String>Catamarca</x:String>
-                  <x:String>Chaco</x:String>
-                  <x:String>Chubut</x:String>
-                  <x:String>Ciudad Autónoma de Buenos Aires</x:String>
-                  <x:String>Córdoba</x:String>
-                  <x:String>Corrientes</x:String>
-                  <x:String>Entre Ríos</x:String>
-                  <x:String>Formosa</x:String>
-                  <x:String>Jujuy</x:String>
-                  <x:String>La Pampa</x:String>
-                  <x:String>La Rioja</x:String>
-                  <x:String>Mendoza</x:String>
-                  <x:String>Misiones</x:String>
-                  <x:String>Neuquén</x:String>
-                  <x:String>Río Negro</x:String>
-                  <x:String>Salta</x:String>
-                  <x:String>San Juan</x:String>
-                  <x:String>San Luis</x:String>
-                  <x:String>Santa Cruz</x:String>
-                  <x:String>Santa Fe</x:String>
-                  <x:String>Santiago del Estero</x:String>
-                  <x:String>Tierra del Fuego, Antártida e Islas del Atlántico Sur</x:String>
-                  <x:String>Tucumán</x:String>
-                </scg:List>
-              </ui:SelectItem.Items>
-              <ui:SelectItem.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dcc888d1-3bcb-4780-8415-682dd4249bd9" InformativeScreenshot="b7779ccc567919f49700085d27b851ac" Selector="&lt;webctrl id='provincia' tag='SELECT' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:SelectItem.Target>
-            </ui:SelectItem>
-            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  motivo1'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="Tenés que ir a un establecimiento educativo a trabajar o estudiar">
-              <ui:SelectItem.Items>
-                <scg:List x:TypeArguments="x:String" Capacity="4">
-                  <x:String>Elegí una opción</x:String>
-                  <x:String>Tenés que viajar a tu trabajo, excepto establecimiento educativo</x:String>
-                  <x:String>Necesitás un permiso especial, hacer trámites o tratamientos médicos; trasladar hijos o hijas; asistir a familiar</x:String>
-                  <x:String>Tenés que ir a un establecimiento educativo a trabajar o estudiar</x:String>
-                </scg:List>
-              </ui:SelectItem.Items>
-              <ui:SelectItem.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0b2a472e-9cda-4f70-991d-59bf997235d4" InformativeScreenshot="3c3ff90b764d4d09725134b517cf0e81" Selector="&lt;webctrl id='motivo1' tag='SELECT' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:SelectItem.Target>
-            </ui:SelectItem>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <If Condition="[in_TypeDNIAccess.ToLower.Contains(in_ForeignDNIOption.ToLower) = False]" DisplayName="If DNI Type is not &quot;Foreign Passport&quot;, select Destination Province and Certificate Reason" sap:VirtualizedContainerService.HintSize="484,242" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Select Province and Reason" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'Destination province' checkbox" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="[&quot;*&quot; + in_DestinationProvince + &quot;*&quot;]">
+                    <ui:SelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="32">
+                        <x:String>Elegí una opción</x:String>
+                        <x:String>Buenos Aires — municipios del AMBA</x:String>
+                        <x:String>Buenos Aires — municipios que NO son parte del AMBA</x:String>
+                        <x:String>Catamarca</x:String>
+                        <x:String>Chaco</x:String>
+                        <x:String>Chubut</x:String>
+                        <x:String>Ciudad Autónoma de Buenos Aires</x:String>
+                        <x:String>Córdoba</x:String>
+                        <x:String>Corrientes</x:String>
+                        <x:String>Entre Ríos</x:String>
+                        <x:String>Formosa</x:String>
+                        <x:String>Jujuy</x:String>
+                        <x:String>La Pampa</x:String>
+                        <x:String>La Rioja</x:String>
+                        <x:String>Mendoza</x:String>
+                        <x:String>Misiones</x:String>
+                        <x:String>Neuquén</x:String>
+                        <x:String>Río Negro</x:String>
+                        <x:String>Salta</x:String>
+                        <x:String>San Juan</x:String>
+                        <x:String>San Luis</x:String>
+                        <x:String>Santa Cruz</x:String>
+                        <x:String>Santa Fe</x:String>
+                        <x:String>Santiago del Estero</x:String>
+                        <x:String>Tierra del Fuego, Antártida e Islas del Atlántico Sur</x:String>
+                        <x:String>Tucumán</x:String>
+                      </scg:List>
+                    </ui:SelectItem.Items>
+                    <ui:SelectItem.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dcc888d1-3bcb-4780-8415-682dd4249bd9" InformativeScreenshot="b7779ccc567919f49700085d27b851ac" Selector="&lt;webctrl id='provincia' tag='SELECT' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SelectItem.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:SelectItem>
+                  <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'MainCertificationReason' checkbox" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="[&quot;*&quot; + in_MainCertificateReason +&quot;*&quot;]">
+                    <ui:SelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="4">
+                        <x:String>Elegí una opción</x:String>
+                        <x:String>Tenés que viajar a tu trabajo, excepto establecimiento educativo</x:String>
+                        <x:String>Necesitás un permiso especial, hacer trámites o tratamientos médicos; trasladar hijos o hijas; asistir a familiar</x:String>
+                        <x:String>Tenés que ir a un establecimiento educativo a trabajar o estudiar</x:String>
+                      </scg:List>
+                    </ui:SelectItem.Items>
+                    <ui:SelectItem.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0b2a472e-9cda-4f70-991d-59bf997235d4" InformativeScreenshot="3c3ff90b764d4d09725134b517cf0e81" Selector="&lt;webctrl id='motivo1' tag='SELECT' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SelectItem.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:SelectItem>
+                </Sequence>
+              </If.Then>
+            </If>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'FormOption' button" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -183,7 +252,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c10be5cd-7590-4765-af9a-e4980390d0d4" InformativeScreenshot="cbb852f9bbeb90e7b819f402f3bbcb4e" Selector="&lt;webctrl parentid='ponchoTable' tag='A' rowName='Sos trabajador de la salud o del Estado' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c10be5cd-7590-4765-af9a-e4980390d0d4" InformativeScreenshot="cbb852f9bbeb90e7b819f402f3bbcb4e" Selector="[String.Format(&quot;&lt;webctrl parentid='ponchoTable' tag='A' rowName='*{0}*' /&gt;&quot;, in_FormOption)]">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -192,32 +261,61 @@
                   </ui:Target.WaitForReady>
                 </ui:Target>
               </ui:Click.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:Click>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
-              <ui:Click.CursorPosition>
-                <ui:CursorPosition Position="Center">
-                  <ui:CursorPosition.OffsetX>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetX>
-                  <ui:CursorPosition.OffsetY>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetY>
-                </ui:CursorPosition>
-              </ui:Click.CursorPosition>
-              <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c10be5cd-7590-4765-af9a-e4980390d0d4" InformativeScreenshot="cbb852f9bbeb90e7b819f402f3bbcb4e" Selector="&lt;webctrl parentid='ponchoTable' tag='A' rowName='*actividad autorizada*' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:Click.Target>
-            </ui:Click>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c10be5cd-7590-4765-af9a-e4980390d0d4" InformativeScreenshot="cbb852f9bbeb90e7b819f402f3bbcb4e" Selector="&lt;webctrl parentid='ponchoTable' tag='A' rowName='*actividad autorizada*' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
           </Sequence>
         </ActivityAction>
       </ui:BrowserScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:BrowserScope>
   </Sequence>
 </Activity>
