@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1003,1289</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1003,941</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Complete_Transportation_data_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="46">
@@ -72,16 +72,15 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Complete_Transportation_data" sap:VirtualizedContainerService.HintSize="847,1224" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Complete_Transportation_data" sap:VirtualizedContainerService.HintSize="476,876" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - Start" sap:VirtualizedContainerService.HintSize="805,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start completing Transportation data in form&quot;]">
+    <ui:LogMessage DisplayName="Log Message - Start" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start completing Transportation data in form&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -89,13 +88,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'Certificate form' page" sap:VirtualizedContainerService.HintSize="805,910" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="c5f81dffb587cb10233b351897748d44" Selector="&lt;html app='msedge.exe' title='Certificado Único de Circulación - Coronavirus COVID 19' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'Certificate form' page" sap:VirtualizedContainerService.HintSize="434,562" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="c5f81dffb587cb10233b351897748d44" Selector="&lt;html app='msedge.exe' title='Certificado Único de Circulación - Coronavirus COVID 19' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="771,764" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,416" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="parsedTarjetNumber" />
               <Variable x:TypeArguments="x:Int32" Name="patentDigits" />
@@ -107,7 +106,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="Multiple Assign - Digits" sap:VirtualizedContainerService.HintSize="729,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign DisplayName="Multiple Assign - Digits" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -135,7 +134,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Type of transport' option" sap:VirtualizedContainerService.HintSize="729,51" sap2010:WorkflowViewState.IdRef="Check_1">
+            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Type of transport' option" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Check_1">
               <ui:Check.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="29c5ed09-e38b-4745-80b0-cada806a1ec1" InformativeScreenshot="0867f77c5da7e73059396d0607c02874" Selector="[String.Format(&quot;&lt;webctrl aaname='{0}' parentid='form-cuhc' tag='LABEL' /&gt;&quot;, in_TransportType)]">
                   <ui:Target.TimeoutMS>
@@ -153,7 +152,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:Check>
-            <If Condition="[patentDigits &gt; 0]" DisplayName="If the vehicle patent is not valid" sap:VirtualizedContainerService.HintSize="729,51" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[patentDigits &gt; 0]" DisplayName="If the vehicle patent is not valid" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -161,10 +160,10 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <If Condition="[patentDigits &gt;=6 And patentDigits &lt;=9]" DisplayName="If the vehicle patent is not empty" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_2">
+                <If Condition="[patentDigits &gt;=6 And patentDigits &lt;=9]" DisplayName="If the vehicle patent is not empty" sap:VirtualizedContainerService.HintSize="484,217" sap2010:WorkflowViewState.IdRef="If_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -194,26 +193,26 @@
                 </If>
               </If.Then>
             </If>
-            <If Condition="[tarjetCardNumberDigits &gt; 0]" DisplayName="If the Tarjet Number is not empty" sap:VirtualizedContainerService.HintSize="729,399" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[tarjetCardNumberDigits &gt; 0]" DisplayName="If the Tarjet Number is not empty" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <If Condition="[Information.IsNumeric(in_SUBETarjetNumber) And (tarjetCardNumberDigits =10 Or &#xD;&#xA;(tarjetCardNumberDigits = 16 And in_SUBETarjetNumber.StartsWith(&quot;606126&quot;)))]" DisplayName="If the tarjet number is valid" sap:VirtualizedContainerService.HintSize="484,242" sap2010:WorkflowViewState.IdRef="If_4">
+                <If Condition="[Information.IsNumeric(in_SUBETarjetNumber) And (tarjetCardNumberDigits =10 Or &#xA;(tarjetCardNumberDigits = 16 And in_SUBETarjetNumber.StartsWith(&quot;606126&quot;)))]" DisplayName="If the tarjet number is valid" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence DisplayName="Type Transportation Tarjet number" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Type Transportation Tarjet number" sap:VirtualizedContainerService.HintSize="304,300" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -250,11 +249,11 @@
                       </ui:TypeInto>
                     </Sequence>
                   </If.Then>
+                  <If.Else>
+                    <Throw DisplayName="Throw BE - Invalid Tarjet number" Exception="[new BusinessRuleException(&quot;The Tarjet card number is invalid. Please check it.&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                  </If.Else>
                 </If>
               </If.Then>
-              <If.Else>
-                <Throw DisplayName="Throw BE - Invalid Tarjet number" Exception="[new BusinessRuleException(&quot;The Tarjet card number is invalid. Please check it.&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
-              </If.Else>
             </If>
           </Sequence>
         </ActivityAction>
@@ -266,7 +265,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BrowserScope>
-    <ui:LogMessage DisplayName="Log Message - end" sap:VirtualizedContainerService.HintSize="805,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;All Transportation Data filled in form&quot;]">
+    <ui:LogMessage DisplayName="Log Message - end" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;All Transportation Data filled in form&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

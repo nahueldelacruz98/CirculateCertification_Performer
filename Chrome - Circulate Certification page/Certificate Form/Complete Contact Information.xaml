@@ -44,7 +44,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1003,2024</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1104,2024</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Fill_Contact_Information_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="27">
@@ -106,6 +106,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Fill_Contact_Information" sap:VirtualizedContainerService.HintSize="497,1959" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -121,7 +122,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="421,1459" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="421,1573" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="jobParametersExist" />
               <Variable x:TypeArguments="x:Int32" Name="phoneNumberDigits" />
@@ -160,7 +161,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <If Condition="[Information.IsNumeric(in_PhoneNumber) = False Or Information.IsNumeric(in_PhoneAreaCode) = False Or &#xA;phoneNumberDigits &lt;&gt; 8 Or&#xA;phoneAreaCode &lt; 1 Or phoneAreaCode &gt; 4]" DisplayName="If phone number or area code are not valid" sap:VirtualizedContainerService.HintSize="379,51" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[Information.IsNumeric(in_PhoneNumber) = False Or Information.IsNumeric(in_PhoneAreaCode) = False And &#xD;&#xA;(phoneNumberDigits &lt;&gt; 8 Or phoneNumberDigits &lt;&gt; 10) And&#xD;&#xA;(phoneAreaCode &lt; 1 Or phoneAreaCode &gt; 4)]" DisplayName="If phone number or area code are not valid" sap:VirtualizedContainerService.HintSize="484,241" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -189,7 +190,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:TypeInto>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'Phone number'" EmptyField="True" sap:VirtualizedContainerService.HintSize="379,51" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="[in_PhoneNumber]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="The phone number may have 8 or 10 digits" DisplayName="Type Into 'Phone number'" EmptyField="True" sap:VirtualizedContainerService.HintSize="379,165" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="[IF(phoneNumberDigits = 10, in_PhoneNumber.Substring(2),in_PhoneNumber)]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2e147a10-fcb5-4a96-8cb7-3551152435fa" InformativeScreenshot="09dbeba3ba7b08ab02a8c89e9a92654d" Selector="&lt;webctrl id='cel_numero' tag='INPUT' type='number' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -202,8 +203,9 @@
               </ui:TypeInto.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:TypeInto>
